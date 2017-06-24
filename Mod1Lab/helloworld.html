@@ -18,6 +18,8 @@
 <script>
   var helloWorldApp = angular.module("helloWorldApp", []);
 
+  helloWorldApp.constant('myConfig', { applicationName:'My Angular JS App'})
+
   helloWorldApp.controller('firstController', [
     '$scope',
     function($scope){
