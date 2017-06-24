@@ -21,9 +21,9 @@
   helloWorldApp.constant('myConfig', { applicationName:'My Angular JS App'})
 
   helloWorldApp.controller('firstController', [
-    '$scope',
-    function($scope){
-      $scope.appName = 'An App Name';
+    '$scope', 'myConfig',
+    function($scope, myConfig){
+      $scope.appName = myConfig.applicationName;
     }
   ]);
 </script>
