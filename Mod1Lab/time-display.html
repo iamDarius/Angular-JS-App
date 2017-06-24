@@ -6,10 +6,10 @@
         crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container">
+<body ng-app="myApp">
+    <div class="container" ng-controller="timeCtrl">
         <h1>Module 2 Homework</h1>
-
+        <h3> The Current Date is: {{ time | date:'yyyy-MM-dd HH:mm:ss Z'   }}
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="scripts/app.js"></script>
