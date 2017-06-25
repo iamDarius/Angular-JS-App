@@ -10,7 +10,28 @@
 <body ng-controller="menuCtrl">
     <div class="container">
         <h1>Tony's Pizza</h1>
-    </div>
+        <h2> {{ model.title }} </h2>
+
+        <div>
+          <input type="radio" name="category" ng-click="changeMainDish('Cheese Pizza')" /> Cheese Pizza
+        </div>
+        <div>
+          <input type="radio" name="category" ng-click="changeMainDish('Pepporoni Pizza')" /> Pepperoni Pizza
+        </div>
+        <div>
+          <input type="radio" name="category" ng-click="changeMainDish('Magherita Pizza')" /> Margherita Pizza
+        </div>
+        <div>
+          <input type="radio" name="category" ng-click="changeMainDish('BBQ Chicken Pizza')"/> BBQ Chicken Pizza
+        </div>
+        <div>
+          <input type="radio" name="category" ng-click="changeMainDish('Combo Pizza')"/> Combo Pizza
+        </div>
+        <div>
+          <h3> Selected Item: </h3>
+          <pre> {{ model.mainDish }} </pre>
+      </div>
+    </div> <!-- / .container -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="app/app.js"></script>
 <script src="app/menuController.js"></script>
