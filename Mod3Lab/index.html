@@ -18,14 +18,19 @@
         <h3> Topping Search </h3>
         <input type="text" class="form-control" ng-model="model.search">
 <br>
+        <div ng-show="model.toppings.push()" class="alert alert-success" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Success:</span>
+          Topping Added! <button>Close </button>
+        </div>
         <div ng-hide="model.search">
           Enter the search criteria above.
         </div>
         <div ng-show="model.search" ng-repeat="t in model.availableToppings | filter: model.search">
           <span ng-click="addTopping(t)"> {{ t }} </span>
-
         </div>
-        <h3> Selected Toppings </h3>
+
+        <h3 ng-show="model.toppings.length > 0"> Selected Toppings </h3>
         <div ng-repeat="t in model.toppings">
           {{t}}
         </div>
