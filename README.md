@@ -4,12 +4,12 @@ Through edX, this course is designed to cover the basics of Angular JS, along wi
 
 The course consists of the following topics:
 
-**Module 1: Getting Started with Angular**
+- **Module 1: Getting Started with Angular**
 
-**Module 2: Using Controllers**
+- **Module 2: Using Controllers**
 
-**Module 3: Constructing Angular Views and Templates**
+- **Module 3: Constructing Angular Views and Templates**
 
-**Module 4: Implementing Promises**
+- **Module 4: Implementing Promises**
 
-**Module 5: Forms and Validation**
+- **Module 5: Forms and Validation**
