@@ -9,8 +9,9 @@
 
 <body ng-controller="pizzaController">
     <div class="container">
-      <div class="row">
-        <h1>Tony's Pizza</h1>
+      <div class="row"><br>
+       <center><img src="app/images/tonyspizza.png" />
+        <h1>Tony's Pizza</h1></center>
         <div class="col-lg-6">
 
 
@@ -18,11 +19,18 @@
         <h3> Topping Search </h3>
         <input type="text" class="form-control" ng-model="model.search">
 <br>
-        <div ng-show="model.toppings.push()" class="alert alert-success" role="alert">
+        <div ng-show="model.toppings.push()"  class="alert alert-success" role="alert">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Success:</span>
-          Topping Added! <button>Close </button>
+          Topping Added! <button>Close</button>
         </div>
+        <!-- No results message -->
+        <div ng-show="(model.availableToppings | filter:model.search).length == 0" class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <span class="sr-only">Error:</span>
+          No results!
+        </div>
+        <li ng-show="model.availableToppings.length === 0">No events</li>
         <div ng-hide="model.search">
           Enter the search criteria above.
         </div>
@@ -37,8 +45,8 @@
       </div>
       </div>
     </div>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
     <script src="./app/app.js"></script>
     <script src="./app/pizzaController.js"></script>
 </body>
