@@ -25,7 +25,7 @@
           Topping Added! <button>Close</button>
         </div>
         <!-- No results message -->
-        <div ng-show="(model.availableToppings | filter:model.search).length == 0" class="alert alert-danger" role="alert">
+        <div ng-show="(model.availableToppings | filter:model.search).length == 0 && !model.toppings.push()" class="alert alert-danger" role="alert">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
           <span class="sr-only">Error:</span>
           No results!
